@@ -15,11 +15,18 @@ angular.module('angularWireframingApp')
     $scope.medications = [
       {
         name: 'advil',
-        quantity: 150
+        quantity: 72,
+        maxQuantity:  150
       },
       {
         name: 'tylenol',
-        quantity: 200
+        quantity: 17,
+        maxQuantity:  200
+      },
+      {
+        name: 'insulin',
+        quantity: 225,
+        maxQuantity:  400
       }
     ];
   });
