@@ -9,6 +9,9 @@
  */
 angular.module('angularWireframingApp')
   .controller('MedicationListCtrl', function ($scope) {
+
+    $scope.searchMedication = '';
+
     $scope.medications = [
       {
         name: 'advil',
