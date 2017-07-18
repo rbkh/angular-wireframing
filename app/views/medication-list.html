@@ -16,6 +16,9 @@
         Medication Name
       </th>
       <th>
+        Category
+      </th>
+      <th>
         Quantity
       </th>
       <th>
@@ -24,9 +27,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="medication in medications | filter:searchMedication">
+    <tr ng-repeat="medication in medications | orderBy: 'name' | filter:searchMedication">
       <td>
         {{medication.name}}
+      </td>
+      <td>
+        {{medication.category}}
       </td>
       <td>
         {{medication.quantity}}
