@@ -18,16 +18,10 @@
 
   <body ng-app="angularWireframingApp">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <a href="/">Home</a>
-            <a href="#!/login">Login</a>
-        </div>
-    </nav>
-
     <!-- VIEW CONTAINER -->
-    <div ng-view class="container">
+    <div class="device">
+      <div class="device-overlay"></div>
+      <div ng-view class="device-view"></div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
