@@ -19,9 +19,14 @@
 
   <body ng-app="angularWireframingApp">
 
+    <!-- Device Control -->
+    <div class="text-center">
+      <button ng-click="setDevice('phone')" class="btn btn-default">Phone</button>
+      <button ng-click="setDevice('tablet')" class="btn btn-default">Tablet</button>
+    </div>
 
     <!-- VIEW CONTAINER -->
-    <div class="device tablet">
+    <div class="device phone">
       <div class="device-overlay"></div>
       <div class="device-view">
         <navigation></navigation>

@@ -8,10 +8,11 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope) {
+
+    $scope.setDevice = function (device) {
+      angular.element('.device').removeClass('phone').removeClass('tablet');
+      angular.element('.device').addClass(device);
+    }
+
   });
