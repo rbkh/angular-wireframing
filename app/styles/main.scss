@@ -8,15 +8,21 @@ html body {
 
 .device {
   position: relative;
-  margin:0 auto;
+  margin:5rem auto;
 }
 
-.device-overlay {
+.device-overlay,
+.device-view {
   position: absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
+  z-index:1;
+}
+
+.device-view  {
+  z-index:2;
 }
 
 .phone {
@@ -25,12 +31,12 @@ html body {
 }
 
 .phone .device-view {
-  width: 296px;
-  height:578px;
-  padding-top: 88px;
-  padding-left: 22px;
-  overflow-x: hidden;
-  overflow-y: visible;
+    width: 275px;
+    height: 492px;
+    margin-top: 88px;
+    margin-left: 21px;
+    overflow-x: scroll;
+    overflow-y: visible;
 }
 
 .phone .device-overlay {

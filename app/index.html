@@ -23,7 +23,10 @@
     <!-- VIEW CONTAINER -->
     <div class="device phone">
       <div class="device-overlay"></div>
-      <div ng-view class="device-view"></div>
+      <div class="device-view">
+        <navigation></navigation>
+        <div class="container-fluid" ng-view></div>
+      </div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
