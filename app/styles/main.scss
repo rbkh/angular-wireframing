@@ -1,11 +1,6 @@
 // bower:scss
 // endbower
 
-html,
-html body {
-  overflow: hidden;
-}
-
 .device {
   position: relative;
   margin:5rem auto;
@@ -89,7 +84,7 @@ html body {
 /* Device Selector */
 
 device-selector {
-  position: absolute;
+  position: fixed;
   bottom:0;
   right:0;
   padding:1rem;
