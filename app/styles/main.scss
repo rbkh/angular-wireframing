@@ -25,6 +25,10 @@ html body {
   z-index:2;
 }
 
+.phone, .tablet {
+
+}
+
 /* Phone */
 .phone {
   width:375px;
@@ -65,4 +69,38 @@ html body {
     background:url('/images/ipad.png');
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+/* Dekstop */
+.desktop {
+  max-width: 1200px;
+}
+
+.desktop .device-overlay,
+.desktop .device-view {
+    position: relative;
+}
+
+.desktop .device-overlay {
+    display: none;
+}
+
+/* Device Selector */
+device-selector {
+  position: absolute;
+  right:0;
+  top:0;
+  padding:2rem;
+  height:100vh;
+  width:300px;
+  background:#EEE;
+  border-right:1px solid #CCC;
+}
+
+device-selector .btn {
+  margin-bottom: 1rem;
+}
+
+device-selector i {
+  vertical-align: middle;
 }
