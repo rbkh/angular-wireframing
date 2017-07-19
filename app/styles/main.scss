@@ -25,6 +25,7 @@ html body {
   z-index:2;
 }
 
+/* Phone */
 .phone {
   width:375px;
   height:667px;
@@ -41,6 +42,27 @@ html body {
 
 .phone .device-overlay {
     background:url('/images/iphone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Tablet */
+.tablet {
+  width:768px;
+  height:1024px;
+}
+
+.tablet .device-view {
+    width: 637px;
+    height: 850px;
+    margin-top: 87px;
+    margin-left: 33px;
+    overflow-x: scroll;
+    overflow-y: visible;
+}
+
+.tablet .device-overlay {
+    background:url('/images/ipad.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
