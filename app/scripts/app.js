@@ -29,6 +29,11 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/medication-list', {
+        templateUrl: 'views/medication-list.html',
+        controller: 'MedicationListCtrl',
+        controllerAs: 'medicationList'
+      })
       .otherwise({
         redirectTo: '/'
       });
