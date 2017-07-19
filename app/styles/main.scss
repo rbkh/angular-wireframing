@@ -94,6 +94,15 @@ device-selector {
   z-index: 100;
 }
 
+device-selector .btn {
+  margin-right: 1rem;
+}
+
+device-selector i {
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
 @media (min-width : 1200px) {
 
     device-selector {
@@ -113,7 +122,5 @@ device-selector {
       margin-bottom: 1rem;
     }
 
-    device-selector i {
-      vertical-align: middle;
-    }
+
 }
