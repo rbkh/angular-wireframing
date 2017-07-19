@@ -73,7 +73,8 @@ html body {
 
 /* Dekstop */
 .desktop {
-  max-width: 1200px;
+  width:100%;
+  margin:0;
 }
 
 .desktop .device-overlay,
@@ -86,21 +87,38 @@ html body {
 }
 
 /* Device Selector */
+
 device-selector {
   position: absolute;
+  bottom:0;
   right:0;
-  top:0;
-  padding:2rem;
-  height:100vh;
-  width:300px;
+  padding:1rem;
+  width:100%;
   background:#EEE;
-  border-right:1px solid #CCC;
+  border-top:1px solid #CCC;
+  z-index: 100;
 }
 
-device-selector .btn {
-  margin-bottom: 1rem;
-}
+@media (min-width : 1200px) {
 
-device-selector i {
-  vertical-align: middle;
+    device-selector {
+      top:0;
+      padding:2rem;
+      height:100vh;
+      width:300px;
+      background:#EEE;
+      border-top: none;
+      border-left:1px solid #CCC;
+    }
+
+
+    device-selector .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    device-selector i {
+      vertical-align: middle;
+    }
 }
