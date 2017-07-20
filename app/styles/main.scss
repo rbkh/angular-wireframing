@@ -46,8 +46,8 @@
 
 /* Tablet */
 .tablet {
-  width:768px;
-  height:1024px;
+  width:702px;
+  height:1023.4px;
 
   .device-view {
     width: 637px;
@@ -62,6 +62,8 @@
     background:url('/images/ipad.png');
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
   }
 }
 
@@ -81,7 +83,6 @@
 }
 
 /* Device Selector */
-
 device-selector {
   position: fixed;
   bottom:0;
