@@ -19,16 +19,19 @@
 
   <body ng-app="angularWireframingApp">
 
-    <device-selector></device-selector>
 
-    <!-- VIEW CONTAINER -->
-    <div class="device phone">
-      <div class="device-overlay"></div>
-      <div class="device-view">
-        <navigation></navigation>
-        <div class="container-fluid" ng-view></div>
+    <div class="device-container">
+      <div class="device phone">
+        <div class="device-overlay"></div>
+        <div class="device-view">
+          <navigation></navigation>
+          <div class="container-fluid" ng-view></div>
+        </div>
       </div>
     </div>
+
+    <device-selector></device-selector>
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
