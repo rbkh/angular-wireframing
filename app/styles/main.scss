@@ -1,6 +1,7 @@
 // bower:scss
 // endbower
 
+
 .device {
   position: relative;
   margin:5rem auto;
@@ -20,29 +21,27 @@
   z-index:2;
 }
 
-.phone, .tablet {
-
-}
-
 /* Phone */
 .phone {
-  width:375px;
-  height:667px;
+  width:314px;
+  height:659px;
 }
 
 .phone .device-view {
-    width: 275px;
-    height: 492px;
-    margin-top: 88px;
-    margin-left: 21px;
-    overflow-x: scroll;
-    overflow-y: visible;
+  width: 274px;
+  height: 485px;
+  margin-top: 88px;
+  margin-left: 21px;
+  overflow-x: scroll;
+  overflow-y: visible;
 }
 
 .phone .device-overlay {
-    background:url('/images/iphone.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+  background:url('/images/iphone.png');
+  background-size: 315px;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 49px;
 }
 
 /* Tablet */
