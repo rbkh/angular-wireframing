@@ -1,83 +1,83 @@
 // bower:scss
 // endbower
 
-
+/* Device Overlay */
 .device {
   position: relative;
-  margin:5rem auto;
-}
+  margin: 5rem auto;
 
-.device-overlay,
-.device-view {
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:1;
-}
+  .device-overlay,
+  .device-view {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+  }
 
-.device-view  {
-  z-index:2;
+  .device-view {
+    z-index:2;
+  }
 }
 
 /* Phone */
 .phone {
   width:314px;
   height:659px;
-}
 
-.phone .device-view {
-  width: 274px;
-  height: 485px;
-  margin-top: 88px;
-  margin-left: 21px;
-  overflow-x: scroll;
-  overflow-y: visible;
-}
+  .device-view {
+    width: 274px;
+    height: 485px;
+    margin-top: 88px;
+    margin-left: 21px;
+    overflow-x: scroll;
+    overflow-y: visible;
+  }
 
-.phone .device-overlay {
-  background:url('/images/iphone.png');
-  background-size: 315px;
-  background-repeat: no-repeat;
-  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 49px;
+  .device-overlay {
+    background:url('/images/iphone.png');
+    background-size: 315px;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 49px;
+  }
 }
 
 /* Tablet */
 .tablet {
   width:768px;
   height:1024px;
-}
 
-.tablet .device-view {
+  .device-view {
     width: 637px;
     height: 850px;
     margin-top: 87px;
     margin-left: 33px;
     overflow-x: scroll;
     overflow-y: visible;
-}
+  }
 
-.tablet .device-overlay {
+  .device-overlay {
     background:url('/images/ipad.png');
     background-size: contain;
     background-repeat: no-repeat;
+  }
 }
 
 /* Dekstop */
 .desktop {
   width:100%;
   margin:0;
-}
 
-.desktop .device-overlay,
-.desktop .device-view {
-    position: relative;
-}
+  .device-overlay,
+  .device-view {
+      position: relative;
+  }
 
-.desktop .device-overlay {
-    display: none;
+  .device-overlay {
+      display: none;
+  }
 }
 
 /* Device Selector */
@@ -91,35 +91,29 @@ device-selector {
   background:#EEE;
   border-top:1px solid #CCC;
   z-index: 100;
-}
 
-device-selector .btn {
-  margin-right: 1rem;
-}
+  @media (min-width: 1200px) {
+    top:0;
+    padding:2rem;
+    height:100vh;
+    width:300px;
+    background:#EEE;
+    border-top: none;
+    border-left:1px solid #CCC;
+  }
 
-device-selector i {
-  vertical-align: middle;
-  padding-right: 0.5rem;
-}
+  .btn {
+    margin-right: 1rem;
 
-@media (min-width : 1200px) {
-
-    device-selector {
-      top:0;
-      padding:2rem;
-      height:100vh;
-      width:300px;
-      background:#EEE;
-      border-top: none;
-      border-left:1px solid #CCC;
-    }
-
-
-    device-selector .btn {
+    @media (min-width: 1200px) {
       display: block;
       width: 100%;
       margin-bottom: 1rem;
     }
+  }
 
-
+  i {
+    vertical-align: middle;
+    padding-right: 0.5rem;
+  }
 }
