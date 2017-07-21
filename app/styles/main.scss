@@ -40,6 +40,7 @@
 
 /* Phone */
 .phone {
+  top:20vh;
   width:314px;
   height:659px;
   border-radius: 49px;
@@ -59,12 +60,31 @@
     background-repeat: no-repeat;
     border-radius: 49px;
   }
+
+  @media (max-width: 640px) {
+        top:0;
+        width:100%;
+        height:100vh;
+
+        .device-view {
+          margin:0;
+          overflow: auto;
+          width: 100%;
+          height:auto;
+        }
+
+        .device-overlay {
+          display:none;
+        }
+    }
+
 }
 
 /* Tablet */
 .tablet {
+  top:5vh;
   width:702px;
-  height:1023.4px;
+  height:1023.2px;
   border-radius: 40px;
 
   .device-view {
@@ -82,6 +102,24 @@
     background-repeat: no-repeat;
     border-radius: 40px;
   }
+
+  @media (max-width: 768px) {
+        top:0;
+        width:100%;
+        height:100vh;
+
+        .device-view {
+          margin:0;
+          overflow: auto;
+          width: 100%;
+          height:auto;
+        }
+
+        .device-overlay {
+          display:none;
+        }
+    }
+
 }
 
 /* Dekstop */
