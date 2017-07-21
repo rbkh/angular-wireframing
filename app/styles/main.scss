@@ -1,11 +1,9 @@
 // bower:scss
 // endbower
 
-.device-container {
-  width:100vw;
-  height:100vh;
-  background-color: #fafafa;
 
+.device-container {
+  width:100%;
   @media (min-width: 1200px) {
       width:70vw;
   }
@@ -15,7 +13,7 @@
 /* Device Overlay */
 .device {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 7rem auto;
   background-color: white;
 
   .device-overlay,
@@ -36,11 +34,13 @@
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.15);
   }
 
+
+
 }
 
 /* Phone */
 .phone {
-  top:20vh;
+  top:7vh;
   width:314px;
   height:659px;
   border-radius: 49px;
@@ -76,6 +76,10 @@
         .device-overlay {
           display:none;
         }
+    }
+
+    @media (min-height: 1000px) and (min-width: 769px) {
+      top:20vh;
     }
 
 }
