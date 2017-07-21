@@ -8,16 +8,6 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('LoginCtrl', function ($scope) {
-    $scope.users = [
-      {
-        email: 'max@brs.com'
-      },
-      {
-        email: 'rebekah@brs.com'
-      },
-      {
-        email: 'tim@brs.com'
-      }
-    ];
+  .controller('LoginCtrl', function () {
+
   });
