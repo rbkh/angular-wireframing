@@ -8,8 +8,8 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope) {
 
-
+    $scope.name = 'Tim';
 
   });
