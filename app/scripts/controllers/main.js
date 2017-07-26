@@ -8,7 +8,7 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function () {
 
 
 
