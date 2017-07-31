@@ -66,31 +66,31 @@ var styles = lazypipe()
 // Tasks //
 ///////////
 
-gulp.task('styles', function () {
+gulp.task('styles', function() {
   return gulp.src(paths.styles)
     .pipe(styles());
 });
 
-gulp.task('lint:scripts', function () {
+gulp.task('lint:scripts', function() {
   return gulp.src(paths.scripts)
     .pipe(lintScripts());
 });
 
-gulp.task('clean:tmp', function (cb) {
+gulp.task('clean:tmp', function(cb) {
   rimraf('./.tmp', cb);
 });
 
-gulp.task('start:client', ['start:server', 'styles'], function () {
+gulp.task('start:client', ['start:server', 'styles'], function() {
   openURL('http://localhost:9000');
 });
 
-gulp.task('start:server', function () {
+gulp.task('start:server', function() {
   $.connect.server({
     root: [yeoman.app, '.tmp'],
     livereload: true,
     // Change this to '0.0.0.0' to access the server from outside.
     port: process.env.PORT || 9000,
-    middleware: function (connect) {
+    middleware: function(connect) {
       return [
         ['/bower_components',
           connect["static"]('./bower_components')
@@ -100,7 +100,7 @@ gulp.task('start:server', function () {
   });
 });
 
-gulp.task('start:server:test', function () {
+gulp.task('start:server:test', function() {
   $.connect.server({
     root: ['test', yeoman.app, '.tmp'],
     livereload: true,
@@ -108,7 +108,7 @@ gulp.task('start:server:test', function () {
   });
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   $.watch(paths.styles)
     .pipe($.plumber())
     .pipe(styles())
@@ -130,12 +130,12 @@ gulp.task('watch', function () {
   gulp.watch('bower.json', ['bower']);
 });
 
-gulp.task('serve', function (cb) {
+gulp.task('serve', function(cb) {
   runSequence('clean:tmp', ['lint:scripts'], ['start:client'],
     'watch', cb);
 });
 
-gulp.task('serve:prod', function () {
+gulp.task('serve:prod', function() {
   $.connect.server({
     root: [yeoman.dist],
     livereload: false,
@@ -143,7 +143,7 @@ gulp.task('serve:prod', function () {
   });
 });
 
-gulp.task('test', ['start:server:test'], function () {
+gulp.task('test', ['start:server:test'], function() {
   var testToFiles = paths.testRequire.concat(paths.scripts, paths.test);
   return gulp.src(testToFiles)
     .pipe($.karma({
@@ -152,7 +152,7 @@ gulp.task('test', ['start:server:test'], function () {
     }));
 });
 
-gulp.task('bower', function () {
+gulp.task('bower', function() {
   return bower('./bower_components')
     .pipe(gulp.dest(yeoman.dist + '/bower_components'));
 });
@@ -161,11 +161,11 @@ gulp.task('bower', function () {
 // Build //
 ///////////
 
-gulp.task('clean:dist', function (cb) {
+gulp.task('clean:dist', function(cb) {
   rimraf('./dist', cb);
 });
 
-gulp.task('client:build', ['html', 'styles'], function () {
+gulp.task('client:build', ['html', 'styles'], function() {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
 
@@ -187,12 +187,12 @@ gulp.task('client:build', ['html', 'styles'], function () {
     .pipe(gulp.dest(yeoman.dist));
 });
 
-gulp.task('html', function () {
+gulp.task('html', function() {
   return gulp.src(yeoman.app + '/views/**/*')
     .pipe(gulp.dest(yeoman.dist + '/views'));
 });
 
-gulp.task('images', function () {
+gulp.task('images', function() {
   return gulp.src(yeoman.app + '/images/**/*')
     /*.pipe($.cache($.imagemin({
       optimizationLevel: 5,
@@ -202,20 +202,26 @@ gulp.task('images', function () {
     .pipe(gulp.dest(yeoman.dist + '/images'));
 });
 
-gulp.task('copy:extras', function () {
+gulp.task('copy:extras', function() {
   return gulp.src(yeoman.app + '/*/.*', {
       dot: true
     })
     .pipe(gulp.dest(yeoman.dist));
 });
 
-gulp.task('copy:fonts', function () {
+gulp.task('copy:fonts', function() {
   return gulp.src(yeoman.app + '/fonts/**/*')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
 });
 
-gulp.task('build', ['clean:dist'], function () {
-  runSequence(['bower', 'images', 'copy:extras', 'copy:fonts', 'client:build', 'serve:prod']);
+gulp.task('build', ['clean:dist'], function() {
+  runSequence(['bower', 'images', 'copy:extras', 'copy:fonts',
+    'client:build'
+  ]);
+});
+
+gulp.task('build:prod', ['clean:dist'], function() {
+  runSequence(['build', 'serve:prod']);
 });
 
 gulp.task('default', ['serve']);

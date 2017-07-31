@@ -35,9 +35,25 @@ Run the app locally at http://localhost:9000
 $ gulp
 ```
 
+### Build the App
+This creates a production build in the `/dist` folder:
+
+```bash
+$ gulp build
+```
+
+
 ### Run in Production Mode
 To build in production mode and run locally at http://localhost:9000
 
 ```bash
+$ gulp build: prod
+```
+
+## Deploy Using Now
+This deploys the production build to a [now](https://zeit.co/now) container:
+
+```bash
 $ gulp build
+$ now dist/ --public
 ```
