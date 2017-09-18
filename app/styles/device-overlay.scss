@@ -1,0 +1,168 @@
+.device-container {
+  height:100vh;
+  width:100%;
+  @media (min-width: 769px) {
+      width:70vw;
+  }
+}
+
+/* Device Overlay */
+.device {
+  height: 100vh;
+  position: relative;
+  margin: 0 auto 7rem auto;
+  background-color: white;
+
+  .device-overlay,
+  .device-view {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+  }
+
+  .device-view {
+    z-index:2;
+  }
+
+  .device-overlay {
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Phone */
+.phone {
+
+
+  @media (min-width: 640px) {
+        top:5vh;
+        width:314px;
+        height:659px;
+        border-radius: 49px;
+
+        .device-view {
+          width: 273px;
+          height: 438px;
+          margin-top: 88px;
+          margin-left: 21px;
+          overflow-x: scroll;
+          overflow-y: visible;
+        }
+
+        .device-overlay {
+          background:url('/images/iphone.png');
+          background-size: 315px;
+          background-repeat: no-repeat;
+          border-radius: 49px;
+        }
+
+        .scroll-view {
+
+          .btn-bottom {
+            position: relative;
+            left: -15px;
+            min-width: 273px;
+          }
+        }
+    }
+
+    @media (min-height: 1000px) and (min-width: 769px) {
+      top:20vh;
+    }
+}
+
+/* Tablet */
+.tablet {
+  top:0;
+  width:100%;
+  height:100vh;
+
+  .device-view {
+    margin:0;
+    overflow: auto;
+    width: 100%;
+    height:auto;
+  }
+
+  .device-overlay {
+    display:none;
+  }
+
+  @media (min-width: 1100px) {
+      top:5vh;
+      width:702px;
+      height:1023.2px;
+      border-radius: 40px;
+
+      .device-view {
+        width: 636px;
+        height: 803px;
+        margin-top: 87px;
+        margin-left: 33px;
+        overflow-x: scroll;
+        overflow-y: visible;
+      }
+
+      .device-overlay {
+        display:block;
+        background:url('/images/ipad.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 40px;
+      }
+  }
+
+}
+
+/* Dekstop */
+.desktop {
+  width:100%;
+  min-height: 100vh;
+  margin:0;
+
+  .device-overlay,
+  .device-view {
+    position: relative;
+  }
+
+  .device-overlay {
+    display: none;
+  }
+}
+
+/* Device Selector */
+device-selector {
+  display:none;
+
+  @media (min-width: 769px) {
+    display: block;
+    position: fixed;
+    bottom:0;
+    right:0;
+    z-index: 100;
+    top:0;
+    padding:2rem;
+    height:100vh;
+    width:30vw;
+    background:#EEE;
+    border-top: none;
+    border-left:1px solid #CCC;
+  }
+
+  .btn {
+    margin: 0 0.5rem;
+
+    @media (min-width: 769px) {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  i {
+    vertical-align: middle;
+    padding-right: 0.5rem;
+  }
+}

@@ -7,7 +7,7 @@ A simple Angular 1.x boilerplate for building wireframes. Built by [Rebekah Lout
 If you have not installed the tools used by the [Yeoman Angular generator v0.16](https://github.com/yeoman/generator-angular), please run the following lines in your terminal:
 
 ```npm
-$ npm install -g grunt-cli bower yo generator-karma generator-angular
+$ npm install -g bower yo generator-karma generator-angular
 $ gem install compass
 ```
 

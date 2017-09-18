@@ -1,181 +1,106 @@
 // bower:scss
 $fa-font-path: "../../bower_components/font-awesome/fonts";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "device-overlay.scss";
 // endbower
 
-.device-container {
-  width:100%;
-  @media (min-width: 1200px) {
-      width:70vw;
-  }
 
+device-selector footer {
+  position: absolute;
+  bottom:2rem;
+  left: 2rem;
+  right:2rem;
+  color:#666;
+  font-size:1rem;
 }
 
-/* Device Overlay */
-.device {
-  position: relative;
-  margin: 0 auto 7rem auto;
-  background-color: white;
-
-  .device-overlay,
-  .device-view {
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:1;
-  }
-
-  .device-view {
-    z-index:2;
-  }
-
-  .device-overlay {
-    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.15);
-  }
-
-
-
+device-selector footer img {
+  max-height: 100px;
 }
 
-/* Phone */
-.phone {
-  top:7vh;
-  width:314px;
-  height:659px;
-  border-radius: 49px;
-
-  .device-view {
-    width: 273px;
-    height: 485px;
-    margin-top: 88px;
-    margin-left: 21px;
-    overflow-x: scroll;
-    overflow-y: visible;
-  }
-
-  .device-overlay {
-    background:url('/images/iphone.png');
-    background-size: 315px;
-    background-repeat: no-repeat;
-    border-radius: 49px;
-  }
-
-  @media (max-width: 640px) {
-        top:0;
-        width:100%;
-        height:100vh;
-
-        .device-view {
-          margin:0;
-          overflow: auto;
-          width: 100%;
-          height:auto;
-        }
-
-        .device-overlay {
-          display:none;
-        }
-    }
-
-    @media (min-height: 1000px) and (min-width: 769px) {
-      top:20vh;
-    }
-
-}
-
-/* Tablet */
-.tablet {
-  top:5vh;
-  width:702px;
-  height:1023.2px;
-  border-radius: 40px;
-
-  .device-view {
-    width: 636px;
-    height: 850px;
-    margin-top: 87px;
-    margin-left: 33px;
-    overflow-x: scroll;
-    overflow-y: visible;
-  }
-
-  .device-overlay {
-    background:url('/images/ipad.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-  }
-
-  @media (max-width: 768px) {
-        top:0;
-        width:100%;
-        height:100vh;
-
-        .device-view {
-          margin:0;
-          overflow: auto;
-          width: 100%;
-          height:auto;
-        }
-
-        .device-overlay {
-          display:none;
-        }
-    }
-
-}
-
-/* Dekstop */
-.desktop {
-  width:100%;
-  min-height: 100vh;
-  margin:0;
-
-  .device-overlay,
-  .device-view {
-    position: relative;
-  }
-
-  .device-overlay {
-    display: none;
-  }
-}
-
-/* Device Selector */
-device-selector {
-  position: fixed;
-  bottom:0;
-  right:0;
-  padding:1rem;
-  width:100%;
-  background:#EEE;
-  border-top:1px solid #CCC;
-  z-index: 100;
-
-  @media (min-width: 1200px) {
-    top:0;
-    padding:2rem;
-    height:100vh;
-    width:30vw;
-    background:#EEE;
-    border-top: none;
-    border-left:1px solid #CCC;
-  }
-
-  .btn {
-    margin: 0 0.5rem;
-
-    @media (min-width: 1200px) {
-      display: block;
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  }
-
-  i {
-    vertical-align: middle;
-    padding-right: 0.5rem;
-  }
-}
+// /* eDrugLog Custom CSS */
+//
+// body > .container {
+//   padding-bottom:5rem;
+// }
+//
+// .img-responsive {
+//   margin: 3rem 0;
+// }
+//
+// .btn-group-lg .btn-square {
+//   border-radius: 0;
+//
+// }
+//
+// /* Navigation */
+// navigation {
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 100;
+// }
+//
+//
+// navigation .btn {
+//   border-bottom:0;
+//   border-radius: 0;
+//   border-right: 0;
+// }
+//
+// navigation:last-child {
+//   border-right: 0;
+// }
+//
+// /* Device Specific Nav */
+// .phone {
+//     @media (min-width: 640px) {
+//       navigation {
+//         position: absolute;
+//         left: 21px;
+//         right: 20px;
+//         bottom: 88px;
+//
+//       }
+//     }
+// }
+//
+// .tablet {
+//   @media (min-width: 769px) {
+//     navigation {
+//       width:70vw;
+//     }
+//   }
+//   @media (min-width: 1100px) {
+//     navigation {
+//       position: absolute;
+//       left: 33px;
+//       right: 33px;
+//       bottom: 88px;
+//       width:auto;
+//     }
+//   }
+// }
+//
+//
+// .dashboard-header {
+//   margin: 15px 0;
+//   padding-bottom: 10px;
+//   border-bottom: 1px solid #eee;
+// }
+//
+// /* Scan Container */
+// #scan-activate {
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+// }
+//
+// .scan-image {
+//   background-image: url('/images/pill-bottle.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
