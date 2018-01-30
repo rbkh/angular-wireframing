@@ -10,6 +10,6 @@
 angular.module('angularWireframingApp')
   .controller('MainCtrl', function ($scope) {
 
-    $scope.name = 'Tim';
+    $scope.name = 'Max';
 
   });
