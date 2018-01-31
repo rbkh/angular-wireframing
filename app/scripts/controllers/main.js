@@ -8,7 +8,9 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, userService) {
+
+    $scope.isLoggedin = userService.isLoggedin;
 
     $scope.name = 'Max';
 

@@ -8,7 +8,7 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('LoginCtrl', function($scope, userService, $location) {
+  .controller('LoginCtrl', function ($scope, userService, $location) {
 
     $scope.logIn = function() {
       userService.logIn();
