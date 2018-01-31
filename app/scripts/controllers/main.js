@@ -12,6 +12,6 @@ angular.module('angularWireframingApp')
 
     $scope.isLoggedin = userService.isLoggedin;
 
-    $scope.name = 'Max';
+    $scope.user = userService.getUser();
 
   });
