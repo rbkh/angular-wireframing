@@ -1,6 +1,9 @@
-<strong>Hello, {{name}}</strong>
-<hr/>
+<div ng-show="!isLoggedIn()">
+  <p class="alert alert-warning">Welcome to Angular Wireframing Demo - please login to continue!</p>
+</div>
 
-<p class="alert alert-info">
-  This is the Angular Wireframing Demo - hope you like it!
-</p>
+<div ng-show="isLoggedIn()">
+  <strong>Hello, {{user.name}}</strong>
+  <hr/>
+  <p class="alert alert-info">This is the Angular Wireframing Demo - hope you like it!</p>
+</div>

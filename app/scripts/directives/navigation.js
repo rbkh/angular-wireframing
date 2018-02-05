@@ -7,9 +7,16 @@
  * # navigation
  */
 angular.module('angularWireframingApp')
-  .directive('navigation', function () {
+  .directive('navigation', function() {
+
+    var controller = function ($scope, userService) {
+      $scope.logOut = userService.logOut;
+      $scope.isLoggedIn = userService.isLoggedIn;
+    };
+
     return {
       templateUrl: '/views/directives/navigation.html',
-      restrict: 'E'
+      restrict: 'E',
+      controller: controller
     };
   });

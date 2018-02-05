@@ -8,8 +8,10 @@
  * Controller of the angularWireframingApp
  */
 angular.module('angularWireframingApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, userService) {
 
-    $scope.name = 'Tim';
+    $scope.isLoggedin = userService.isLoggedin;
+
+    $scope.user = userService.getUser();
 
   });
