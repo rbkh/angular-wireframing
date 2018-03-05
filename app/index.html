@@ -22,8 +22,8 @@
       <div class="device phone">
         <div class="device-overlay"></div>
         <div class="device-view">
-          <navigation></navigation>
-          <div class="container-fluid" ng-view></div>
+          <navigation logout-handler="logoutHandler" logged-in="loggedIn"></navigation>
+          <div class="container-fluid" ng-view autoscroll></div>
         </div>
       </div>
     </div>

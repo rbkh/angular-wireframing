@@ -2,8 +2,8 @@
     <div class="container-fluid">
       <ul class="nav nav-pills">
         <li><a href="/">Home</a></li>
-        <li ng-show="!isLoggedIn()"><a href="#!/login">Login</a></li>
-        <li ng-show="isLoggedIn()"><a ng-click="logOut()">Logout</a></li>
+        <li ng-hide="loggedIn"><a href="#!/login">Login</a></li>
+        <li ng-show="loggedIn"><a ng-click="logoutHandler()">Logout</a></li>
       </ul>
     </div>
 </nav>
