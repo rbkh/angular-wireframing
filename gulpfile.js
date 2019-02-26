@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var bower = require('gulp-bower');
 var $ = require('gulp-load-plugins')();
+var uglify = require('gulp-uglify-es').default;
 var openURL = require('open');
 var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
@@ -175,7 +176,7 @@ gulp.task('client:build', ['html', 'styles'], function() {
     }))
     .pipe(jsFilter)
     .pipe($.ngAnnotate())
-    .pipe($.uglify())
+    .pipe(uglify())
     .pipe(jsFilter.restore())
     .pipe(cssFilter)
     .pipe($.minifyCss({

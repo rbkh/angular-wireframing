@@ -1,9 +1,33 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav nav-pills">
-        <li><a href="/">Home</a></li>
-        <li ng-show="!isLoggedIn()"><a href="#!/login">Login</a></li>
-        <li ng-show="isLoggedIn()"><a ng-click="logOut()">Logout</a></li>
-      </ul>
-    </div>
+  <div class="container-fluid">
+    <ul class="nav nav-pills">
+      <!-- <li><a href="/" class="navbar-brand"><img src="images/ripso.png" /></a></li> -->
+
+      <!-- Public Nav -->
+      <li ng-hide="loggedIn" class="dropdown pull-right">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" target="_self" aria-haspopup="true" aria-expanded="false">
+          <div class="fa fa-bars"></div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#!/">About Us</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#!/login">Login</a></li>
+        </ul>
+      </li>
+
+      <!-- User Nav -->
+      <li ng-show="loggedIn" class="dropdown pull-right">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" target="_self" aria-haspopup="true" aria-expanded="false">
+          <div class="fa fa-bars"></div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#!/">About Us</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#!/">My Dashboard</a></li>
+          <li><a href="#!/">My Account</a></li>
+          <li><a ng-click="logoutHandler()" href="#" target="_self">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </nav>

@@ -1,8 +1,9 @@
 .device-container {
   height:100vh;
   width:100%;
+
   @media (min-width: 769px) {
-      width:70vw;
+    width:70vw;
   }
 }
 
@@ -35,42 +36,41 @@
 /* Phone */
 .phone {
 
-
   @media (min-width: 640px) {
-        top:5vh;
-        width:314px;
-        height:659px;
-        border-radius: 49px;
+    top: 5vh;
+    width: 314px;
+    height: 659px;
+    border-radius: 49px;
 
-        .device-view {
-          width: 273px;
-          height: 438px;
-          margin-top: 88px;
-          margin-left: 21px;
-          overflow-x: auto;
-          overflow-y: visible;
-        }
-
-        .device-overlay {
-          background:url('/images/iphone.png');
-          background-size: 315px;
-          background-repeat: no-repeat;
-          border-radius: 49px;
-        }
-
-        .scroll-view {
-
-          .btn-bottom {
-            position: relative;
-            left: -15px;
-            min-width: 273px;
-          }
-        }
+    .device-view {
+      width: 274px;
+      height: 485px;
+      margin-top: 88px;
+      margin-left: 21px;
+      overflow-x: auto;
+      overflow-y: visible;
     }
 
-    @media (min-height: 1000px) and (min-width: 769px) {
-      top:20vh;
+    .device-overlay {
+      background:url('/images/iphone.png');
+      background-size: 315px;
+      background-repeat: no-repeat;
+      border-radius: 49px;
     }
+
+    .scroll-view {
+
+      .btn-bottom {
+        position: relative;
+        left: -15px;
+        min-width: 273px;
+      }
+    }
+  }
+
+  @media (min-height: 1000px) and (min-width: 769px) {
+    top:20vh;
+  }
 }
 
 /* Tablet */
@@ -91,29 +91,28 @@
   }
 
   @media (min-width: 1100px) {
-      top:5vh;
-      width:702px;
-      height:1023.2px;
+    top:5vh;
+    width:702px;
+    height:1023.2px;
+    border-radius: 40px;
+
+    .device-view {
+      width: 636px;
+      height: 848px;
+      margin-top: 87px;
+      margin-left: 33px;
+      overflow-x: scroll;
+      overflow-y: visible;
+    }
+
+    .device-overlay {
+      display:block;
+      background:url('/images/ipad.png');
+      background-size: contain;
+      background-repeat: no-repeat;
       border-radius: 40px;
-
-      .device-view {
-        width: 636px;
-        height: 803px;
-        margin-top: 87px;
-        margin-left: 33px;
-        overflow-x: scroll;
-        overflow-y: visible;
-      }
-
-      .device-overlay {
-        display:block;
-        background:url('/images/ipad.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 40px;
-      }
+    }
   }
-
 }
 
 /* Dekstop */

@@ -33,4 +33,13 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  }).run(function ($rootScope, $localStorage, userService) {
+
+    $rootScope.logoutHandler = userService.logOut;
+    $rootScope.loggedIn = userService.isLoggedIn();
+
+    if ($rootScope.loggedIn) {
+      $rootScope.user = userService.getUser();
+    }
+    
   });

@@ -8,16 +8,21 @@
  * Service in the angularWireframingApp.
  */
 angular.module('angularWireframingApp')
-  .service('userService', function($localStorage) {
+  .service('userService', function($localStorage, $rootScope, $location) {
 
     this.logIn = function() {
-      return $localStorage.user = {
+      $localStorage.user = {
         name: 'Max'
       };
+      $rootScope.loggedIn = true;
+      $rootScope.user = $localStorage.user;
     };
 
     this.logOut = function() {
       delete $localStorage.user;
+      delete $rootScope.user;
+      $rootScope.loggedIn = false;
+      $location.path('/');
       return true;
     };
 
